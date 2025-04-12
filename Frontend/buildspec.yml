@@ -12,7 +12,7 @@ phases:
   post_build:
     commands:
       - echo Pushing Frontend Docker image to ECR...
-      - docker push 124355663661.dkr.ecr.ap-northeast-3.amazonaws.com/newg2-repo:frontend
+      - docker push 124355663661.dkr.ecr.ap-northeast-3.amazonaws.com/newg2-repo:latest
       - echo Writing image definitions...
       - printf '[{"name":"FrontEnd","imageUri":"124355663661.dkr.ecr.ap-northeast-3.amazonaws.com/newg2-repo:frontend"}]' > imagedefinitions.json
 artifacts:
